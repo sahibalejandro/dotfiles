@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+echo "Linking kitty configuration..."
+rm -rf "$HOME/.config/kitty"
+ln -s "$DOTFILESDIR/kitty" "$HOME/.config/kitty"
+
+echo "Linking tmux configuration..."
+rm -rf "$HOME/.tmux.conf"
+ln -s "$DOTFILESDIR/tmux/tmux.conf" "$HOME/.tmux.conf"
+
+echo "Linking nvim configuration..."
+rm -rf "$HOME/.config/nvim"
+ln -s "$DOTFILESDIR/nvim" "$HOME/.config/nvim"
