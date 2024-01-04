@@ -9,6 +9,6 @@ return {
       },
     })
 
-    vim.cmd("colorscheme terafox")
+    vim.cmd("colorscheme nordfox")
   end
 }
