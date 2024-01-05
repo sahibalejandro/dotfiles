@@ -37,16 +37,3 @@ vim.o.listchars = "tab:> ,trail:·"
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.hlsearch = false
-
--- Useful keymaps
-vim.keymap.set("i", "jk", "<esc>")
-vim.keymap.set("n", "<leader><leader>", ":b#<cr>")
-vim.keymap.set("n", "<right>", ":vert res +10<cr>")
-vim.keymap.set("n", "<left>", ":vert res -10<cr>")
-
--- Sort visual selected lines by length
-vim.keymap.set("v", "<leader>s", ":!awk '{ print length(), $0 | \"sort -n | cut -d\\\\  -f2-\" }'<cr>")
-
--- UltiSnips
-vim.g.UltiSnipsJumpForwardTrigger = "<tab>"
-vim.g.UltiSnipsJumpBackwardTrigger = "<s-tab>"
