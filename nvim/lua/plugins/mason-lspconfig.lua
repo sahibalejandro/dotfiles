@@ -12,9 +12,11 @@ return {
 
     local lspconfig = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    local default_capabilities = { capabilities = capabilities }
 
-    lspconfig.tsserver.setup({ capabilities = capabilities })
-    lspconfig.phpactor.setup({ capabilities = capabilities })
+    lspconfig.flow.setup(default_capabilities)
+    lspconfig.tsserver.setup(default_capabilities)
+    lspconfig.phpactor.setup(default_capabilities)
 
     -- Global Keymaps
     vim.keymap.set("n", "<leader>lo", vim.diagnostic.open_float)
