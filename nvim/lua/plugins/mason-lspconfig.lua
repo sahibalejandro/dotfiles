@@ -15,8 +15,28 @@ return {
     local default_capabilities = { capabilities = capabilities }
 
     lspconfig.flow.setup(default_capabilities)
-    lspconfig.tsserver.setup(default_capabilities)
     lspconfig.phpactor.setup(default_capabilities)
+    lspconfig.tsserver.setup({
+      capabilities = capabilities,
+      -- Disable single_file_support to ensure this server is attached
+      -- only with a matching root directory.
+      single_file_support = false,
+
+      -- Look for the Flow and TS root directories and do not attach
+      -- tsserver if a Flow root directory is found. The root_pattern
+      -- for tsserver is a copy from:
+      -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
+      root_dir = function(filename)
+        local flowRootDir = lspconfig.util.root_pattern('.flowconfig')(filename)
+        local tsRootDir = lspconfig.util.root_pattern("tsconfig.json", "package.json", "jsconfig.json", ".git")(filename)
+
+        if flowRootDir == nil then
+          return tsRootDir
+        end
+
+        return nil
+      end
+    })
 
     -- Global Keymaps
     vim.keymap.set("n", "<leader>lo", vim.diagnostic.open_float)
