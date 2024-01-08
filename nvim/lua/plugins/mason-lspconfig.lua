@@ -14,6 +14,7 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local default_capabilities = { capabilities = capabilities }
 
+    lspconfig.tailwindcss.setup(default_capabilities)
     lspconfig.flow.setup(default_capabilities)
     lspconfig.phpactor.setup(default_capabilities)
     lspconfig.tsserver.setup({
