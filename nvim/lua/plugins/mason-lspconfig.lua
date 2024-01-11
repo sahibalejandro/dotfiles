@@ -16,7 +16,7 @@ return {
 
     lspconfig.tailwindcss.setup(default_capabilities)
     lspconfig.flow.setup(default_capabilities)
-    lspconfig.phpactor.setup(default_capabilities)
+    lspconfig.intelephense.setup(default_capabilities)
     lspconfig.tsserver.setup({
       capabilities = capabilities,
       -- Disable single_file_support to ensure this server is attached
