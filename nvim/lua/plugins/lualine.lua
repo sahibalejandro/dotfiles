@@ -10,18 +10,25 @@ return {
 
     require("lualine").setup({
       options = {
-        disabled_filetypes = {
-          'NvimTree'
+        theme = {
+          normal = {
+            a = { bg = "#292e38", fg = "#e9e9ea" },
+            b = { bg = "#292e38", fg = "#7c7d83" },
+            c = { bg = "#292e38", fg = "#7c7d83" },
+          }
         },
-        -- set section_separators to empty string to avoid breaking the startup screen.
-        -- section_separators = ''
+        globalstatus = true,
+        section_separators = '',
+        component_separators = '',
       },
 
       sections = {
         lualine_a = { filename_options },
-        lualine_b = { 'branch' },
-        lualine_c = { 'diff' },
-        lualine_x = { 'diagnostics', 'filetype' }
+        lualine_b = { 'branch', 'diff' },
+        lualine_c = {},
+        lualine_x = {},
+        lualine_y = { 'diagnostics', 'filetype' },
+        lualine_z = { 'progress', 'location' },
       },
 
       inactive_sections = {
