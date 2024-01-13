@@ -10,7 +10,7 @@ vim.filetype.add({
       -- /* @flow
       -- For regexp info see :help usr_27
       if vim.filetype.matchregex(first_line, [[^ *\/\+\*\=.*@flow]]) then
-        return 'tsx'
+        return 'flow'
       end
 
       return "javascript"

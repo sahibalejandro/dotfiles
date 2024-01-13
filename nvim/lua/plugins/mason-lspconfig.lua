@@ -15,7 +15,11 @@ return {
     local default_capabilities = { capabilities = capabilities }
 
     lspconfig.tailwindcss.setup(default_capabilities)
-    lspconfig.flow.setup(default_capabilities)
+    lspconfig.flow.setup({
+      capabilities = default_capabilities,
+      -- Only "flow" filetype should use this language server.
+      filetypes = { 'flow' },
+    })
     lspconfig.intelephense.setup(default_capabilities)
     lspconfig.tsserver.setup({
       capabilities = capabilities,

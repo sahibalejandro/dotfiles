@@ -29,5 +29,8 @@ return {
       highlight = { enable = true },
       indent = { enable = true },
     })
+
+    -- Use tsx parser for flow files.
+    vim.treesitter.language.register('tsx', 'flow')
   end
 }
