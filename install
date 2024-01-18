@@ -3,13 +3,21 @@
 DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 echo "Linking kitty configuration..."
-rm -rf "$HOME/.config/kitty"
-ln -s "$DOTFILESDIR/kitty" "$HOME/.config/kitty"
+KITTY_DIR="$HOME/.config/kitty"
+rm -rf "$KITTY_DIR"
+ln -s "$DOTFILESDIR/kitty" "$KITTY_DIR"
 
 echo "Linking tmux configuration..."
-rm -rf "$HOME/.tmux.conf"
-ln -s "$DOTFILESDIR/tmux/tmux.conf" "$HOME/.tmux.conf"
+TMUX_DIR="$HOME/.tmux.conf"
+rm -rf "$TMUX_DIR"
+ln -s "$DOTFILESDIR/tmux/tmux.conf" "$TMUX_DIR"
 
 echo "Linking nvim configuration..."
-rm -rf "$HOME/.config/nvim"
-ln -s "$DOTFILESDIR/nvim" "$HOME/.config/nvim"
+NVIM_DIR="$HOME/.config/nvim"
+rm -rf "$NVIM_DIR"
+ln -s "$DOTFILESDIR/nvim" "$NVIM_DIR"
+
+echo "Linking lazygit configuration..."
+LAZYGIT_DIR="$HOME/Library/Application Support/lazygit"
+rm -rf "$LAZYGIT_DIR"
+ln -s "$DOTFILESDIR/lazygit" "$LAZYGIT_DIR"
