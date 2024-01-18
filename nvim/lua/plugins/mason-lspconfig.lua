@@ -5,6 +5,7 @@ return {
     'williamboman/mason.nvim',
     'neovim/nvim-lspconfig',
     'hrsh7th/cmp-nvim-lsp',
+    'b0o/schemastore.nvim',
   },
 
   config = function()
@@ -12,15 +13,46 @@ return {
 
     local lspconfig = require('lspconfig')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
-    local default_capabilities = { capabilities = capabilities }
 
-    lspconfig.tailwindcss.setup(default_capabilities)
+    --
+    -- PHP
+    --
+    lspconfig.intelephense.setup({
+      capabilities = capabilities,
+    })
+
+    --
+    -- TailwindCSS
+    --
+    lspconfig.tailwindcss.setup({
+      capabilities = capabilities,
+    })
+
+    --
+    -- Flow
+    --
     lspconfig.flow.setup({
-      capabilities = default_capabilities,
+      capabilities = capabilities,
       -- Only "flow" filetype should use this language server.
       filetypes = { 'flow' },
     })
-    lspconfig.intelephense.setup(default_capabilities)
+
+    --
+    -- JSON Schemas
+    --
+    lspconfig.jsonls.setup({
+      capabilities = capabilities,
+      settings = {
+        json = {
+          validate = { enable = true },
+          schemas = require('schemastore').json.schemas(),
+        },
+      },
+    })
+
+    --
+    -- TypeScript
+    --
     lspconfig.tsserver.setup({
       capabilities = capabilities,
       -- Disable single_file_support to ensure this server is attached
@@ -43,7 +75,9 @@ return {
       end
     })
 
+    --
     -- Diagnostic Configurations
+    --
     vim.diagnostic.config({
       virtual_text = false,
       float = {
@@ -51,7 +85,9 @@ return {
       },
     })
 
+    --
     -- LSP keymaps
+    --
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('UserLspConfig', {}),
       callback = function(event)
