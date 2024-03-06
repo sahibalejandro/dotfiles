@@ -15,6 +15,11 @@ return {
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
     --
+    -- Rust
+    --
+    lspconfig.rust_analyzer.setup({})
+
+    --
     -- PHP
     --
     lspconfig.intelephense.setup({
