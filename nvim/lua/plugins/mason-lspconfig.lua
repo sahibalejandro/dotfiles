@@ -60,6 +60,13 @@ return {
     })
 
     --
+    -- C#
+    --
+    lspconfig.csharp_ls.setup({
+      capabilities = capabilities,
+    })
+
+    --
     -- TypeScript
     --
     lspconfig.tsserver.setup({
