@@ -12,9 +12,9 @@ return {
       options = {
         theme = {
           normal = {
-            a = { bg = "#292e38", fg = "#e9e9ea" },
-            b = { bg = "#292e38", fg = "#7c7d83" },
-            c = { bg = "#292e38", fg = "#7c7d83" },
+            a = { bg = "#1a1b26", fg = "#e9e9ea" },
+            b = { bg = "#1a1b26", fg = "#7c7d83" },
+            c = { bg = "#1a1b26", fg = "#7c7d83" },
           }
         },
         globalstatus = true,
