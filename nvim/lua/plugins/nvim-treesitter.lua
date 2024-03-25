@@ -14,6 +14,7 @@ return {
         'bash',
         'html',
         'json',
+        'rust',
         'scss',
         'yaml',
         'regex',
