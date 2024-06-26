@@ -33,7 +33,17 @@ return {
       capabilities = capabilities,
     })
 
+    --
+    -- CSS
+    --
     lspconfig.cssls.setup({
+      capabilities = capabilities,
+    })
+
+    --
+    -- Vue
+    --
+    lspconfig.volar.setup({
       capabilities = capabilities,
     })
 
@@ -69,27 +79,45 @@ return {
     --
     -- TypeScript
     --
-    lspconfig.tsserver.setup({
-      capabilities = capabilities,
-      -- Disable single_file_support to ensure this server is attached
-      -- only with a matching root directory.
-      single_file_support = false,
+    --lspconfig.tsserver.setup({
+    --  capabilities = capabilities,
+    --  init_options = {
+    --    plugins = {
+    --      {
+    --        name = '@vue/typescript-plugin',
+    --        location = '',
+    --        languages = {'javascript', 'typescript', 'vue'},
+    --      },
+    --    },
+    --  },
+    --  filetypes = {
+    --    'vue',
+    --    'javascript',
+    --    'typescript',
+    --    'javascript.jsx',
+    --    'typescript.tsx',
+    --    'javascriptreact',
+    --    'typescriptreact',
+    --  },
+    --  -- Disable single_file_support to ensure this server is attached
+    --  -- only with a matching root directory.
+    --  single_file_support = false,
 
-      -- Look for the Flow and TS root directories and do not attach
-      -- tsserver if a Flow root directory is found. The root_pattern
-      -- for tsserver is a copy from:
-      -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
-      root_dir = function(filename)
-        local flowRootDir = lspconfig.util.root_pattern('.flowconfig')(filename)
-        local tsRootDir = lspconfig.util.root_pattern('tsconfig.json', 'package.json', 'jsconfig.json', '.git')(filename)
+    --  -- Look for the Flow and TS root directories and do not attach
+    --  -- tsserver if a Flow root directory is found. The root_pattern
+    --  -- for tsserver is a copy from:
+    --  -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
+    --  root_dir = function(filename)
+    --    local flowRootDir = lspconfig.util.root_pattern('.flowconfig')(filename)
+    --    local tsRootDir = lspconfig.util.root_pattern('tsconfig.json', 'package.json', 'jsconfig.json', '.git')(filename)
 
-        if flowRootDir == nil then
-          return tsRootDir
-        end
+    --    if flowRootDir == nil then
+    --      return tsRootDir
+    --    end
 
-        return nil
-      end
-    })
+    --    return nil
+    --  end
+    --})
 
     --
     -- Diagnostic Configurations
