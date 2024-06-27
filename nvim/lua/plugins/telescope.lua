@@ -13,5 +13,7 @@ return {
     { '<leader>s', require('telescope.builtin').live_grep },
     { '<leader>f', require('telescope.builtin').find_files },
     { '<leader>k', require('telescope.builtin').grep_string },
+    { '<leader>lr', require('telescope.builtin').lsp_references },
+    { '<leader>ld', require('telescope.builtin').lsp_definitions },
   },
 }
