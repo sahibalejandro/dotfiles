@@ -37,3 +37,7 @@ vim.o.listchars = "tab:> ,trail:·"
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.hlsearch = false
+
+-- Disable netrw as advised by nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
