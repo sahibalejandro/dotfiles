@@ -10,6 +10,9 @@ return {
 
       ensure_installed = {
         'lua',
+        'tsx',
+        'javascript',
+        'typescript',
       },
 
       highlight = {
