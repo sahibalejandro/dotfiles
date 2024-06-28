@@ -9,10 +9,24 @@ return {
       sync_install = true,
 
       ensure_installed = {
-        'lua',
-        'tsx',
+        'bash',
+        'css',
+        'dockerfile',
+        'html',
         'javascript',
+        'json',
+        'lua',
+        'markdown',
+        'markdown_inline',
+        'php',
+        'rust',
+        'scss',
+        'tsx',
         'typescript',
+        'vim',
+        'vimdoc',
+        'vue',
+        'yaml',
       },
 
       highlight = {
