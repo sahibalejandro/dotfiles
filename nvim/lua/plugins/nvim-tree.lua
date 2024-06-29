@@ -5,7 +5,13 @@ return {
   lazy = false,
 
   config = function()
-    require('nvim-tree').setup {}
+    require'nvim-tree'.setup{
+      view = {
+        number = true,
+        side = 'right',
+        relativenumber = true,
+      }
+    }
   end,
 
   keys = {
