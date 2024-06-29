@@ -33,7 +33,7 @@ return {
         vim.keymap.set('n', '<leader>ln', vim.diagnostic.goto_next)
         vim.keymap.set('n', '<leader>lp', vim.diagnostic.goto_prev)
         vim.keymap.set('n', '<leader>lo', vim.diagnostic.open_float)
-      end
+      end,
     })
   end,
 }

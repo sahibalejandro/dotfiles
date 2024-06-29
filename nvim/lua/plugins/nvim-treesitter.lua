@@ -3,9 +3,9 @@ return {
   build = ':TSUpdate',
 
   config = function()
-    local configs = require('nvim-treesitter.configs')
+    local configs = require'nvim-treesitter.configs'
 
-    configs.setup({
+    configs.setup{
       sync_install = true,
 
       ensure_installed = {
@@ -32,6 +32,6 @@ return {
       highlight = {
         enable = true,
       },
-    })
-  end
+    }
+  end,
 }

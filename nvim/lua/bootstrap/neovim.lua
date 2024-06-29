@@ -1,13 +1,13 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 
 vim.o.wrap = false
 vim.o.number = true
 vim.o.relativenumber = true
-vim.o.signcolumn = "yes"
+vim.o.signcolumn = 'yes'
 vim.o.swapfile = false
 vim.o.scrolloff = 5
 vim.o.sidescrolloff = vim.o.scrolloff
-vim.o.mouse = ""
+vim.o.mouse = ''
 
 -- Splits that make more sense
 vim.o.splitbelow = true
@@ -17,10 +17,10 @@ vim.o.splitright = true
 vim.o.confirm = true
 
 -- Make wildmenu behave more friendly
-vim.o.wildmode = "longest:full,full"
+vim.o.wildmode = 'longest:full,full'
 
 -- Set the title so tmux can display more
--- info in its "pane_title" setting.
+-- info in its 'pane_title' setting.
 vim.o.title = true
 
 -- Configure indentation
@@ -31,7 +31,7 @@ vim.o.shiftwidth = vim.o.tabstop
 
 -- Make invisible characters visible
 vim.o.list = true
-vim.o.listchars = "tab:> ,trail:·"
+vim.o.listchars = 'tab:> ,trail:·'
 
 -- Search
 vim.o.ignorecase = true

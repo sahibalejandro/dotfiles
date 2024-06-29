@@ -10,12 +10,12 @@ return {
         number = true,
         side = 'right',
         relativenumber = true,
-      }
+      },
     }
   end,
 
   keys = {
     { '<leader>1', '<cmd>NvimTreeToggle<cr>' },
     { '<leader>2', '<cmd>NvimTreeFindFile<cr>' },
-  }
+  },
 }

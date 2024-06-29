@@ -13,7 +13,7 @@ vim.filetype.add({
         return 'tsx'
       end
 
-      return "javascript"
+      return 'javascript'
     end,
   },
 })
