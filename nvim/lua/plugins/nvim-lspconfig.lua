@@ -1,17 +1,28 @@
 return {
   'neovim/nvim-lspconfig',
-  priority = 700,
+  priority = 600,
+
+  dependencies = {
+    'hrsh7th/cmp-nvim-lsp',
+  },
 
   config = function()
     local lsp = require'lspconfig'
+    local capabilities = require'cmp_nvim_lsp'.default_capabilities()
 
     -- LSP Server for Vue
     -- Configuration for TypeScript:
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
-    lsp.volar.setup{}
+    lsp.volar.setup{
+      -- Since the tsserver is used to extend Volar the "capabilities"
+      -- property does not need to be added here. Doing it will cause
+      -- duplicated entries in the auto-complete options.
+    }
 
     -- LSP Server for TypeScript and JavaScript
     lsp.tsserver.setup{
+      capabilities = capabilities,
+
       init_options = {
         plugins = {
           {
