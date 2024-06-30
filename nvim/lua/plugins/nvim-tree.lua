@@ -10,6 +10,7 @@ return {
         number = true,
         side = 'right',
         relativenumber = true,
+        width = 45,
       },
     }
   end,
