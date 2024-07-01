@@ -10,29 +10,37 @@ return {
     local lsp = require'lspconfig'
     local capabilities = require'cmp_nvim_lsp'.default_capabilities()
 
+    local mason_packages_path = vim.fn.stdpath'data' .. '/mason/packages'
+    local volar_location = mason_packages_path .. '/vue-language-server/node_modules/@vue/language-server'
+    local typescript_location = mason_packages_path .. '/typescript-language-server/node_modules/typescript/lib'
+
     -- LSP Server for Vue
-    -- Configuration for TypeScript:
+    --
+    -- Configuration notes:
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
+    -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371
     lsp.volar.setup{
-      -- Since the tsserver is used to extend Volar the "capabilities"
-      -- property does not need to be added here. Doing it will cause
-      -- duplicated entries in the auto-complete options.
+      capabilities = capabilities,
+      init_options = {
+        vue = { hybridMode = false },
+        typescript = {
+          tsdk = typescript_location
+        }
+      },
     }
 
     -- LSP Server for TypeScript and JavaScript
     lsp.tsserver.setup{
       capabilities = capabilities,
-
       init_options = {
         plugins = {
           {
             name = '@vue/typescript-plugin',
-            location = '',
-            languages = { 'javascript', 'typescript', 'vue' }
+            location = volar_location,
+            languages = { 'vue' }
           },
         },
       },
-      filetypes = { 'javascript', 'typescript', 'vue' }
     }
 
     vim.api.nvim_create_autocmd('LspAttach', {
