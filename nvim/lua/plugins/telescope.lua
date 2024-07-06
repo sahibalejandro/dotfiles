@@ -4,7 +4,16 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' },
 
   config = function()
-    require'telescope'.setup{}
+    require'telescope'.setup{
+      defaults = {
+        layout_strategy = 'vertical',
+        layout_config = {
+          width = 0.9,
+          preview_cutoff = 30,
+          preview_height = 0.6,
+        },
+      },
+    }
   end,
 
   keys = {
