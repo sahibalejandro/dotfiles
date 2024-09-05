@@ -30,7 +30,7 @@ return {
     }
 
     -- LSP Server for TypeScript and JavaScript
-    lsp.tsserver.setup{
+    lsp.ts_ls.setup{
       capabilities = capabilities,
       init_options = {
         plugins = {
