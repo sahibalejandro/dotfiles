@@ -43,6 +43,11 @@ return {
       },
     }
 
+    -- LSP Server for PHP
+    lsp.intelephense.setup{
+      capabilities = capabilities,
+    }
+
     vim.api.nvim_create_autocmd('LspAttach', {
       callback = function(args)
         vim.keymap.set('n', '<leader>li', vim.lsp.buf.hover)
