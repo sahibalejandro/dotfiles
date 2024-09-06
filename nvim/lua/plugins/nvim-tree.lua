@@ -5,6 +5,9 @@ return {
   lazy = false,
 
   config = function()
+    vim.cmd([[hi NvimTreeNormal guibg=NONE]])
+    vim.cmd([[hi NvimTreeNormalNC guibg=NONE]])
+
     require'nvim-tree'.setup{
       view = {
         number = true,
