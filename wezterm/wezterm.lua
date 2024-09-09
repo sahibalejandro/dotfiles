@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 -- Colors
 config.color_scheme = '3024 (base16)'
 config.colors = {
-  background = 'black'
+  background = '#080808'
 }
 
 -- Fonts
@@ -25,7 +25,7 @@ config.hide_tab_bar_if_only_one_tab = true
 
 -- Window
 config.window_decorations = 'RESIZE'
-config.window_background_opacity = 0.925
+config.window_background_opacity = 0.95
 config.macos_window_background_blur = 20
 
 return config
