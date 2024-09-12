@@ -5,8 +5,8 @@ local config = wezterm.config_builder()
 config.color_scheme = 'tokyonight_night'
 
 -- Fonts
-config.font = wezterm.font'SFMono Nerd Font Mono'
-config.font_size = 15
+config.font = wezterm.font('Iosevka Fixed', { stretch = 'Expanded' })
+config.font_size = 16
 config.line_height = 1.6
 
 -- Wezterm Apperance

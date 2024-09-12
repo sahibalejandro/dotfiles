@@ -6,6 +6,9 @@ return {
   config = function()
     require'tokyonight'.setup{
       transparent = true,
+      styles = {
+        comments = { italic = true },
+      },
     }
 
     vim.cmd[[colorscheme tokyonight]]
