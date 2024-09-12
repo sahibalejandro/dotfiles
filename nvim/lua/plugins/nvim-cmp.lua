@@ -6,6 +6,7 @@ return {
     'SirVer/ultisnips',
     'hrsh7th/cmp-nvim-lsp',
     'onsails/lspkind-nvim',
+    'quangnguyen30192/cmp-nvim-ultisnips',
   },
 
   config = function()
@@ -23,6 +24,7 @@ return {
       },
 
       sources = cmp.config.sources({
+        { name = 'ultisnips' },
         { name = 'nvim_lsp' },
       }, {
         name = 'buffer',
