@@ -2,7 +2,7 @@
 
 DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
-echo "Linking kitty configuration..."
+echo "Linking Kitty configuration..."
 KITTY_DIR="$HOME/.config/kitty"
 rm -rf "$KITTY_DIR"
 ln -s "$DOTFILESDIR/kitty" "$KITTY_DIR"
@@ -12,17 +12,23 @@ TMUX_DIR="$HOME/.tmux.conf"
 rm -rf "$TMUX_DIR"
 ln -s "$DOTFILESDIR/tmux/tmux.conf" "$TMUX_DIR"
 
-echo "Linking nvim configuration..."
+echo "Linking NeoVim configuration..."
 NVIM_DIR="$HOME/.config/nvim"
 rm -rf "$NVIM_DIR"
 ln -s "$DOTFILESDIR/nvim" "$NVIM_DIR"
 
-echo "Linking lazygit configuration..."
+echo "Linking LazyGit configuration..."
 LAZYGIT_DIR="$HOME/Library/Application Support/lazygit"
 rm -rf "$LAZYGIT_DIR"
 ln -s "$DOTFILESDIR/lazygit" "$LAZYGIT_DIR"
 
-echo "Linking wezterm configuration..."
+echo "Linking WezTerm configuration..."
 WEZTERM_DIR="$HOME/.config/wezterm"
 rm -rf "$WEZTERM_DIR"
 ln -s "$DOTFILESDIR/wezterm" "$WEZTERM_DIR"
+
+echo "Linking Alacritty configuration..."
+ALACRITTY_DIR="$HOME/.config/alacritty"
+rm -rf "$ALACRITTY_DIR"
+ln -s "$DOTFILESDIR/alacritty" "$ALACRITTY_DIR"
+
