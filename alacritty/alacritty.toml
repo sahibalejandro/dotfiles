@@ -13,3 +13,6 @@ opacity = 0.95
 dynamic_padding = true
 decorations = "Buttonless"
 padding = { x = 10, y = 10 }
+
+[selection]
+save_to_clipboard = true
