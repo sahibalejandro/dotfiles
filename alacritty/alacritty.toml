@@ -3,9 +3,13 @@ import = [
 ]
 
 [font]
-normal = { family = "Iosevka Fixed", style = "Extended" }
 size = 16
 offset = { y = 16 }
+normal = { family = "Iosevka Fixed", style = "Extended" }
 
 [window]
+blur = true
+opacity = 0.95
+dynamic_padding = true
 decorations = "Buttonless"
+padding = { x = 10, y = 10 }
