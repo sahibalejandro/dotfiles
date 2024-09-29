@@ -5,7 +5,7 @@ import = [
 [font]
 size = 16
 offset = { y = 16 }
-normal = { family = "Iosevka Fixed", style = "Extended" }
+normal = { family = "IosevkaSahib Nerd Font Mono", style = "Extended" }
 
 [window]
 blur = true
