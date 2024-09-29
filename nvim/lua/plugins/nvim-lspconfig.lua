@@ -48,10 +48,15 @@ return {
 
     -- LSP Server for CSS
     lsp.cssls.setup{ capabilities = capabilities }
+
     -- LSP Server for CSS Modules
     lsp.cssmodules_ls.setup{ capabilities = capabilities }
+
     -- LSP Server for SASS/SCSS
     lsp.somesass_ls.setup{ capabilities = capabilities }
+
+    -- LSP Server for Rust
+    lsp.rust_analyzer.setup{ capabilities = capabilities, }
 
     vim.api.nvim_create_autocmd('LspAttach', {
       callback = function(args)
