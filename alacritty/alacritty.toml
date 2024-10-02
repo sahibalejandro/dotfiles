@@ -4,7 +4,8 @@ import = [
 
 [font]
 size = 16
-offset = { y = 16 }
+offset = { y = 18 }
+glyph_offset = { y = 9 }
 normal = { family = "IosevkaSahib Nerd Font Mono", style = "Extended" }
 
 [window]
