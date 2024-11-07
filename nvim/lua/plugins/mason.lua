@@ -1,5 +1,6 @@
 return {
   'williamboman/mason.nvim',
-  priority = 900,
+  lazy = false,
+  priority = 700,
   config = true,
 }

@@ -1,6 +1,7 @@
 return {
   'neovim/nvim-lspconfig',
-  priority = 600,
+  lazy = false,
+  priority = 900,
 
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
