@@ -67,6 +67,9 @@ return {
     -- LSP Server for SASS/SCSS
     lsp.somesass_ls.setup{ capabilities = capabilities, handlers = handlers }
 
+    -- LSP Server for Tailwind CSS
+    lsp.tailwindcss.setup{ capabilities = capabilities, handlers = handlers }
+
     -- LSP Server for Rust
     lsp.rust_analyzer.setup{ capabilities = capabilities, handlers = handlers }
 
