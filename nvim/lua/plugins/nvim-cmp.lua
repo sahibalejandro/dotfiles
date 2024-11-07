@@ -3,10 +3,10 @@ return {
   priority = 700,
 
   dependencies = {
-    'SirVer/ultisnips',
     'hrsh7th/cmp-nvim-lsp',
     'onsails/lspkind-nvim',
-    'quangnguyen30192/cmp-nvim-ultisnips',
+    'dcampos/nvim-snippy',
+    'dcampos/cmp-snippy',
   },
 
   config = function()
@@ -15,7 +15,7 @@ return {
     cmp.setup{
       snippet = {
         expand = function(args)
-          vim.fn['UltiSnips#Anon'](args.body)
+          require'snippy'.expand_snippet(args.body)
         end,
       },
 
@@ -28,7 +28,6 @@ return {
       },
 
       sources = cmp.config.sources({
-        { name = 'ultisnips' },
         { name = 'nvim_lsp' },
       }, {
         name = 'buffer',
