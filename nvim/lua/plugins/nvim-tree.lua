@@ -1,8 +1,7 @@
 return {
   'nvim-tree/nvim-tree.lua',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
-
-  lazy = false,
+  lazy = true,
 
   config = function()
     vim.cmd([[hi NvimTreeNormal guibg=NONE]])
