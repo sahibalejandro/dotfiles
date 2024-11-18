@@ -1,17 +1,10 @@
 return {
-  'catppuccin/nvim',
+  'craftzdog/solarized-osaka.nvim',
   lazy = false,
   priority = 1000,
 
   config = function()
-    require'catppuccin'.setup{
-      flavour = "mocha",
-      transparent_background = true,
-      styles = {
-        comments = { "italic" },
-      },
-    }
-
-    vim.cmd[[colorscheme catppuccin]]
+    require'solarized-osaka'.setup{}
+    vim.cmd[[colorscheme solarized-osaka]]
   end,
 }
