@@ -4,22 +4,18 @@ return {
   priority = 900,
 
   dependencies = {
-    'hrsh7th/cmp-nvim-lsp',
+    'saghen/blink.cmp',
   },
 
   config = function()
     local lsp = require'lspconfig'
-    local capabilities = require'cmp_nvim_lsp'.default_capabilities()
+    local capabilities = require'blink.cmp'.get_lsp_capabilities()
 
     local mason_packages_path = vim.fn.stdpath'data' .. '/mason/packages'
     local volar_location = mason_packages_path .. '/vue-language-server/node_modules/@vue/language-server'
     local typescript_location = mason_packages_path .. '/typescript-language-server/node_modules/typescript/lib'
 
     local border = "rounded"
-    local handlers = {
-      ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
-      ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
-    }
 
     vim.diagnostic.config {
       float = { border = border }
@@ -31,7 +27,6 @@ return {
     -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
     -- https://github.com/williamboman/mason-lspconfig.nvim/issues/371
     lsp.volar.setup{
-      handlers = handlers,
       capabilities = capabilities,
       init_options = {
         vue = { hybridMode = false },
@@ -43,7 +38,6 @@ return {
 
     -- LSP Server for TypeScript and JavaScript
     lsp.ts_ls.setup{
-      handlers = handlers,
       capabilities = capabilities,
       init_options = {
         plugins = {
@@ -57,22 +51,22 @@ return {
     }
 
     -- LSP Server for PHP
-    lsp.intelephense.setup{ capabilities = capabilities, handlers = handlers }
+    lsp.intelephense.setup{ capabilities = capabilities }
 
     -- LSP Server for CSS
-    lsp.cssls.setup{ capabilities = capabilities, handlers = handlers }
+    lsp.cssls.setup{ capabilities = capabilities }
 
     -- LSP Server for CSS Modules
-    lsp.cssmodules_ls.setup{ capabilities = capabilities, handlers = handlers }
+    lsp.cssmodules_ls.setup{ capabilities = capabilities }
 
     -- LSP Server for SASS/SCSS
-    lsp.somesass_ls.setup{ capabilities = capabilities, handlers = handlers }
+    lsp.somesass_ls.setup{ capabilities = capabilities }
 
     -- LSP Server for Tailwind CSS
-    lsp.tailwindcss.setup{ capabilities = capabilities, handlers = handlers }
+    lsp.tailwindcss.setup{ capabilities = capabilities }
 
     -- LSP Server for Rust
-    lsp.rust_analyzer.setup{ capabilities = capabilities, handlers = handlers }
+    lsp.rust_analyzer.setup{ capabilities = capabilities }
 
     vim.api.nvim_create_autocmd('LspAttach', {
       callback = function(args)
