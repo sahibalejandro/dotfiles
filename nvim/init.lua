@@ -1,5 +1,4 @@
 require "bootstrap.neovim"
-require "bootstrap.filetype"
 require "bootstrap.mappings"
 require "bootstrap.autocommands"
 require "bootstrap.lazy"

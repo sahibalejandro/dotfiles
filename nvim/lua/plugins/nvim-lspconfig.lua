@@ -1,5 +1,6 @@
 return {
   'neovim/nvim-lspconfig',
+
   lazy = false,
   priority = 900,
 
@@ -67,17 +68,5 @@ return {
 
     -- LSP Server for Rust
     lsp.rust_analyzer.setup{ capabilities = capabilities }
-
-    vim.api.nvim_create_autocmd('LspAttach', {
-      callback = function(args)
-        vim.keymap.set('n', '<leader>li', vim.lsp.buf.hover)
-        vim.keymap.set('n', '<leader>lR', vim.lsp.buf.rename)
-        vim.keymap.set('n', '<leader>ld', vim.lsp.buf.definition)
-        vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action)
-        vim.keymap.set('n', '<leader>ln', vim.diagnostic.goto_next)
-        vim.keymap.set('n', '<leader>lp', vim.diagnostic.goto_prev)
-        vim.keymap.set('n', '<leader>lo', vim.diagnostic.open_float)
-      end,
-    })
   end,
 }
