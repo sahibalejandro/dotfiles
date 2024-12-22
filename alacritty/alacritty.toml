@@ -1,6 +1,3 @@
-import = [
-  "~/.config/alacritty/theme.toml"
-]
 
 [font]
 size = 16
@@ -17,3 +14,8 @@ padding = { x = 10, y = 10 }
 
 [selection]
 save_to_clipboard = true
+
+[general]
+import = [
+  "~/.config/alacritty/theme.toml"
+]
