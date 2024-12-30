@@ -15,7 +15,15 @@
                   }
                 },
                 "to": [{ "key_code": "up_arrow" }],
-                "type": "basic"
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [
+                      { "vendor_id": 7504, "product_id": 24926, "description": "NullKey Choc" }
+                    ]
+                  }
+                ]
               },
               {
                 "from": {
@@ -26,7 +34,15 @@
                   }
                 },
                 "to": [{ "key_code": "down_arrow" }],
-                "type": "basic"
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [
+                      { "vendor_id": 7504, "product_id": 24926, "description": "NullKey Choc" }
+                    ]
+                  }
+                ]
               },
               {
                 "from": {
@@ -37,7 +53,15 @@
                   }
                 },
                 "to": [{ "key_code": "left_arrow" }],
-                "type": "basic"
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [
+                      { "vendor_id": 7504, "product_id": 24926, "description": "NullKey Choc" }
+                    ]
+                  }
+                ]
               },
               {
                 "from": {
@@ -48,7 +72,15 @@
                   }
                 },
                 "to": [{ "key_code": "right_arrow" }],
-                "type": "basic"
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [
+                      { "vendor_id": 7504, "product_id": 24926, "description": "NullKey Choc" }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -59,7 +91,15 @@
                 "from": { "key_code": "caps_lock" },
                 "to": [{ "key_code": "left_control" }],
                 "to_if_alone": [{ "key_code": "escape" }],
-                "type": "basic"
+                "type": "basic",
+                "conditions": [
+                  {
+                    "type": "device_unless",
+                    "identifiers": [
+                      { "vendor_id": 7504, "product_id": 24926, "description": "NullKey Choc" }
+                    ]
+                  }
+                ]
               }
             ]
           }
