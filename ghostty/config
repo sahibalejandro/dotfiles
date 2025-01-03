@@ -1,0 +1,17 @@
+theme = tokyonight_night
+font-size = 15.8
+font-family = Iosevka Fixed
+adjust-cell-width = 2%
+adjust-cell-height = 20%
+adjust-cursor-height = 20%
+
+background-opacity = 0.95
+background-blur-radius = 20
+
+macos-titlebar-style = hidden
+window-padding-balance = true
+window-padding-x = 10
+window-padding-y = 10
+window-inherit-font-size = false
+window-height = 35
+window-width = 160

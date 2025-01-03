@@ -32,6 +32,11 @@ ALACRITTY_DIR="$HOME/.config/alacritty"
 rm -rf "$ALACRITTY_DIR"
 ln -s "$DOTFILESDIR/alacritty" "$ALACRITTY_DIR"
 
+echo "Linking Ghostty configuration..."
+GHOSTTY_DIR="$HOME/.config/ghostty"
+rm -rf "$GHOSTTY_DIR"
+ln -s "$DOTFILESDIR/ghostty" "$GHOSTTY_DIR"
+
 echo "Linking Karabiner configuration..."
 KARABINER_FILE="$HOME/.config/karabiner/karabiner.json"
 rm -rf "$KARABINER_FILE"
