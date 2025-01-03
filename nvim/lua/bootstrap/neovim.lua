@@ -1,4 +1,5 @@
 vim.g.mapleader = ' '
+vim.g.netrw_liststyle = 3
 
 vim.o.wrap = false
 vim.o.number = true
