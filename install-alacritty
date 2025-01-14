@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+echo "Linking Alacritty configuration..."
+ALACRITTY_DIR="$HOME/.config/alacritty"
+rm -rf "$ALACRITTY_DIR"
+ln -s "$DOTFILESDIR/alacritty" "$ALACRITTY_DIR"

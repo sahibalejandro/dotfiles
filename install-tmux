@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+echo "Linking tmux configuration..."
+TMUX_DIR="$HOME/.tmux.conf"
+rm -rf "$TMUX_DIR"
+ln -s "$DOTFILESDIR/tmux/tmux.conf" "$TMUX_DIR"
