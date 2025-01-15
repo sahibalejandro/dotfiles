@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Building Maverick Docker image..."
+docker build -t maverick --platform linux/amd64 .

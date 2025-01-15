@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo "Creating Docker volume..."
+docker volume create maverick_nvim
+
+echo "Running Maverick..."
+docker run --rm \
+-v "$(pwd):/home/zero/.config/nvim" \
+-v "maverick_nvim:/home/zero/.local/share/nvim" \
+-ti --name maverick maverick
