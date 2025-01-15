@@ -6,7 +6,6 @@ return {
       ensure_installed = {
         "bash",
         "css",
-        "dockerfile",
         "html",
         "javascript",
         "json",
