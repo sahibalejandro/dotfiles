@@ -15,3 +15,5 @@ window-padding-y = 10
 window-inherit-font-size = false
 window-height = 35
 window-width = 160
+
+copy-on-select = true
