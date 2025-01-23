@@ -1,9 +1,12 @@
-theme = tokyonight_night
-font-size = 18
-font-family = Iosevka Fixed
-adjust-cell-width = 2%
-adjust-cell-height = 20%
-adjust-cursor-height = 20%
+theme = catppuccin-macchiato
+
+font-size = 17
+font-family = Monaspace Argon
+font-family-italic = Monaspace Radon
+
+#adjust-cell-width = 2%
+#adjust-cell-height = 20%
+#adjust-cursor-height = 20%
 
 background-opacity = 0.95
 background-blur-radius = 20
