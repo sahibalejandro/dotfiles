@@ -1,8 +1,7 @@
 theme = catppuccin-macchiato
 
 font-size = 17
-font-family = Monaspace Argon
-font-family-italic = Monaspace Radon
+font-family = JetBrains Mono
 
 #adjust-cell-width = 2%
 #adjust-cell-height = 20%
