@@ -1,5 +1,4 @@
 vim.g.mapleader = ' '
-vim.o.colorcolumn = '121'
 
 vim.o.wrap = false
 vim.o.number = true
