@@ -1,7 +1,7 @@
 theme = catppuccin-macchiato
 
 font-size = 17
-font-family = JetBrains Mono
+font-family = JetBrains Mono NL
 
 #adjust-cell-width = 2%
 #adjust-cell-height = 20%
