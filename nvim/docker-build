@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
-echo "Building Maverick Docker image..."
-docker build -t maverick --platform linux/amd64 .
+USER_ID=$(id -u ${USER})
+GROUP_ID=$(id -g ${USER})
+
+echo "Building Maverick Docker for user ${USER_ID}:${GROUP_ID} ..."
+docker build --build-arg USER_ID=${USER_ID} --build-arg GROUP_ID=${GROUP_ID} -t maverick .

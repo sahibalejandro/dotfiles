@@ -4,7 +4,9 @@ ARG USER_ID=1000
 ARG GROUP_ID=1000
 
 RUN apt-get update
-RUN apt-get -y install build-essential zsh zsh curl git unzip wget ripgrep fd-find fzf
+RUN apt-get -y install build-essential zsh zsh curl git unzip wget ripgrep fd-find locales fzf
+RUN locale-gen en_US.UTF-8
+RUN update-locale LANG=en_US.UTF-8
 
 # Properly create the user that matches the host user.
 # Apparently this does not have any effect on MacOS hosts.
@@ -37,6 +39,7 @@ RUN echo "eval \"$(/home/zero/.local/bin/fnm env --use-on-cd --shell zsh)\"" >> 
 RUN /home/zero/.local/bin/fnm install --lts
 
 RUN echo "export PATH=\"/home/zero/.local/bin:\$PATH\"" >> .zshrc
+RUN echo "export LANG=en_US.UTF-8" >> .zshrc
 RUN sed -i "s/robbyrussell/cloud/" .zshrc
 
 CMD ["/bin/zsh"]

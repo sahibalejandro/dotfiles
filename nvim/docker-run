@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
+echo "Stopping Maverick container..."
+docker stop maverick
 
 echo "Creating Docker volume..."
 docker volume create maverick_nvim
 
-echo "Running Maverick..."
-docker run --rm \
--v "$(pwd):/home/zero/.config/nvim" \
+echo "Running Maverick container..."
+docker run --rm --hostname maverick \
 -v "maverick_nvim:/home/zero/.local/share/nvim" \
 -ti --name maverick maverick
