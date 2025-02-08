@@ -6,5 +6,9 @@ return {
     "nvim-lua/plenary.nvim",
   },
 
-  opts = {},
+  opts = {
+    settings = {
+      tsserver_max_memory = 1024
+    }
+  },
 }
