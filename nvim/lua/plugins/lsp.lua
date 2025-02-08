@@ -8,7 +8,6 @@ return {
 
     opts = {
       servers = {
-        ts_ls = {},
         lua_ls = {},
         intelephense = {},
       },
