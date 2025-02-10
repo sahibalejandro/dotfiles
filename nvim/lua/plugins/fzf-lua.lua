@@ -7,10 +7,18 @@ return {
     fzf_lua.setup({
       winopts = {
         fullscreen = true,
+        preview = {
+          layout = "vertical",
+          vertical = "down:80%",
+          winopts = {
+            number = false,
+          },
+        }
       },
       oldfiles = {
         include_current_session = true,
       },
+      fzf_colors = true,
     })
 
     vim.keymap.set("n", "<leader>ff", fzf_lua.files, { desc = "Find files" })
