@@ -3,7 +3,7 @@ TERM = "xterm-256color"
 
 [font]
 size = 17
-normal = { family = "JetBrainsMono Nerd Font" }
+normal = { family = "JetBrainsMonoNL Nerd Font" }
 
 [window]
 blur = true
