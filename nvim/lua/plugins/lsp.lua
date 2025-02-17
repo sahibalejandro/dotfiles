@@ -41,7 +41,10 @@ return {
     opts = {
       sources = {
         default = { "lsp" },
-        cmdline = {},
+      },
+
+      cmdline = {
+        enabled = false,
       },
 
       completion = {
