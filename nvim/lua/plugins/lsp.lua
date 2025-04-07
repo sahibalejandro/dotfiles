@@ -9,7 +9,13 @@ return {
     opts = {
       servers = {
         lua_ls = {},
-        intelephense = {},
+        intelephense = {
+          settings = {
+            environment = {
+              phpVersion = "8.2",
+            },
+          },
+        },
       },
     },
 
