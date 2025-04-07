@@ -1,13 +1,11 @@
 return {
-  "folke/tokyonight.nvim",
+  "craftzdog/solarized-osaka.nvim",
 
+  lazy = false,
   priority = 1000,
 
   config = function()
-    require("tokyonight").setup {
-      transparent = true,
-    }
-
-    vim.cmd("colorscheme tokyonight-night")
-  end
+    require'solarized-osaka';
+    vim.cmd[[colorscheme solarized-osaka]]
+  end,
 }

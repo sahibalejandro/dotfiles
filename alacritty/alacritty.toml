@@ -2,14 +2,12 @@
 TERM = "xterm-256color"
 
 [font]
-size = 18
-normal = { family = "Monaco" }
-offset = { y = 10 }
-glyph_offset = { y = 8 }
+size = 16
+normal = { family = "Monaco Nerd Font Mono" }
 
 [window]
 blur = true
-opacity = 0.925
+#opacity = 0.925
 dynamic_padding = true
 decorations = "Buttonless"
 padding = { x = 10, y = 10 }

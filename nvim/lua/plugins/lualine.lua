@@ -13,9 +13,9 @@ return {
       options = {
         theme = {
           normal = {
-            a = { bg = nil, fg = '#e9e9ea' },
-            b = { bg = nil, fg = '#7c7d83' },
-            c = { bg = nil, fg = '#7c7d83' },
+            a = { bg = '#02212b', fg = '#8c9c9c' },
+            b = { bg = '#02212b', fg = '#455a61' },
+            c = { bg = '#02212b', fg = '#455a61' },
           }
         },
         globalstatus = true,
@@ -25,7 +25,8 @@ return {
 
       sections = {
         lualine_a = { filename_options },
-        lualine_b = { 'branch', 'diff' },
+        --lualine_b = { 'branch', 'diff' },
+        lualine_b = { 'branch' },
         lualine_c = {},
         lualine_x = {},
         lualine_y = { 'diagnostics', 'filetype' },
