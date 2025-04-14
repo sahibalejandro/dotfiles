@@ -19,6 +19,11 @@ return {
         include_current_session = true,
       },
       fzf_colors = true,
+      keymap = {
+        fzf = {
+          ["ctrl-q"] = "select-all+accept",
+        },
+      },
     })
 
     vim.keymap.set("n", "<leader>ff", fzf_lua.files, { desc = "Find files" })
