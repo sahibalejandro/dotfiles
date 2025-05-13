@@ -8,7 +8,7 @@ return {
 
   opts = {
     settings = {
-      tsserver_max_memory = 6000
-    }
+      tsserver_max_memory = "auto",
+    },
   },
 }
