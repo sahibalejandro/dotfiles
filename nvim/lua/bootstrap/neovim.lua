@@ -8,6 +8,7 @@ vim.o.swapfile = false
 vim.o.scrolloff = 5
 vim.o.sidescrolloff = vim.o.scrolloff
 vim.o.mouse = ''
+vim.o.laststatus = 0
 
 -- Splits that make more sense
 vim.o.splitbelow = true
