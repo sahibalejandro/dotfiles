@@ -8,6 +8,7 @@ vim.o.hlsearch = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.signcolumn = 'yes'
+vim.o.wrap = false
 vim.cmd [[set completeopt+=menuone,noselect]]
 
 vim.keymap.set('i', 'jk', '<esc>')
