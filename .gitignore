@@ -1,3 +1,4 @@
 .DS_Store
 lazy-lock.json
 lazygit/state.yml
+nvim/lsp/node_modules/
