@@ -1,7 +1,7 @@
 --
 -- Find files using FZF
 --
-vim.keymap.set('n', '<space>ff', function()
+vim.keymap.set('n', '<space>f', function()
   local tmp_file = vim.fn.tempname()
 
   vim.api.nvim_create_autocmd('TermClose', {
@@ -19,6 +19,6 @@ vim.keymap.set('n', '<space>ff', function()
     end
   })
 
-  vim.cmd('terminal fzf > ' .. tmp_file)
+  vim.cmd('terminal rg --files | fzf > ' .. tmp_file)
   vim.cmd('startinsert')
 end)
