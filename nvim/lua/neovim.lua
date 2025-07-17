@@ -16,5 +16,5 @@ vim.keymap.set('n', '<space><space>', '<c-^>')
 vim.keymap.set('n', '<space>n', ':cn<cr>')
 vim.keymap.set('n', '<space>p', ':cp<cr>')
 
-vim.cmd [[colorscheme retrobox]]
 vim.cmd [[set completeopt+=menuone,noinsert,fuzzy]]
+vim.cmd [[highlight Normal guibg=none]]
