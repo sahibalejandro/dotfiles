@@ -28,25 +28,24 @@ return {
 
     local function fzf_picker_preview_hidden(picker_name)
       return function()
-        fzf_lua[picker_name] {
+        fzf_lua[picker_name]({
           winopts = {
             preview = { hidden = true }
           }
-        }
+        })
       end
     end
 
-    vim.keymap.set("n", "<leader>ff", fzf_picker_preview_hidden "files", { desc = "Find files" })
-    vim.keymap.set("n", "<leader>of", fzf_picker_preview_hidden "oldfiles", { desc = "Find old files" })
-    vim.keymap.set("n", "<leader>gw", fzf_lua.grep_cword, { desc = "Grep word under cursor" })
-    vim.keymap.set("n", "<leader>lg", fzf_lua.live_grep, { desc = "Live grep" })
+    vim.keymap.set("n", "<leader>f", fzf_picker_preview_hidden("files"), { desc = "Find files" })
+    vim.keymap.set("n", "<leader>o", fzf_picker_preview_hidden("oldfiles"), { desc = "Find old files" })
+    vim.keymap.set("n", "<leader>k", fzf_lua.grep_cword, { desc = "Grep word under cursor" })
+    vim.keymap.set("n", "<leader>s", fzf_lua.live_grep, { desc = "Live grep" })
   end,
 
   keys = {
-    "<leader>ff",
-    "<leader>of",
-    "<leader>gw",
-    "<leader>lg",
-    "<leader>lk",
+    "<leader>f",
+    "<leader>o",
+    "<leader>k",
+    "<leader>s",
   },
 }
