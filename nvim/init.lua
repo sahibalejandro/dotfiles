@@ -1,5 +1,2 @@
-require "bootstrap.neovim"
-require "bootstrap.mappings"
-require "bootstrap.autocommands"
-
-require "bootstrap.lazy"
+require('config.bootstrap')
+require('config.lsp')
