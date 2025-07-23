@@ -8,7 +8,11 @@ return {
 
   opts = {
     settings = {
+<<<<<<< Updated upstream
       tsserver_max_memory = "auto",
+=======
+      tsserver_max_memory = 8000,
+>>>>>>> Stashed changes
     },
   },
 }
