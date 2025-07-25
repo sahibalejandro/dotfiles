@@ -12,6 +12,8 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.hlsearch = false
 
+vim.o.grepprg = 'rg --vimgrep'
+
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<space><space>', '<c-^>')
 
