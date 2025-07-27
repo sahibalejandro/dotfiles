@@ -16,3 +16,4 @@ vim.g.netrw_banner = 0
 
 vim.cmd('colorscheme habamax')
 vim.cmd('set completeopt+=menuone,noinsert,fuzzy')
+vim.cmd('highlight Normal guibg=None')
