@@ -6,4 +6,4 @@ vim.lsp.config('*', {
   end,
 })
 
-vim.lsp.enable('php')
+vim.lsp.enable('intelephense')
