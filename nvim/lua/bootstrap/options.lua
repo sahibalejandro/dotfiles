@@ -1,4 +1,6 @@
 vim.g.mapleader = ' '
+vim.g.netrw_banner = false
+
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.signcolumn = 'yes'
@@ -9,7 +11,9 @@ vim.o.hlsearch = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.winborder = 'rounded'
-vim.g.netrw_banner = false
+vim.o.wrap = false
+vim.o.swapfile = false
+vim.o.mouse = ''
 
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader><leader>', '<c-^>')
