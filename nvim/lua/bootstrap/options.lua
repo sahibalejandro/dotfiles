@@ -8,9 +8,9 @@ vim.o.softtabstop = -1
 vim.o.hlsearch = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.o.winborder = 'rounded'
 
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader><leader>', '<c-^>')
 
-vim.cmd('colorscheme habamax')
 vim.cmd('highlight Normal guibg=None')
