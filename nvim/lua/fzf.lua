@@ -28,4 +28,4 @@ local function find_file()
   })
 end
 
-vim.keymap.set('n', '<space>f', find_file)
+vim.keymap.set('n', '<leader>f', find_file)

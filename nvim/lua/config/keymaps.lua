@@ -1,6 +1,6 @@
 vim.keymap.set('i', 'jk', '<esc>')
-vim.keymap.set('n', '<space><space>', '<c-^>')
-vim.keymap.set('n', '<space>e', ':Ex<cr>')
+vim.keymap.set('n', '<leader><leader>', '<c-^>')
+vim.keymap.set('n', '<leader>e', ':Ex<cr>')
 
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'netrw',
