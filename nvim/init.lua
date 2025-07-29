@@ -1,3 +1,4 @@
-require('bootstrap.options')
-require('bootstrap.lazy')
-require('bootstrap.lsp')
+require('config.options')
+require('config.lazy')
+require('config.lsp')
+require('config.colorscheme')

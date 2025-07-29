@@ -18,5 +18,3 @@ vim.o.mouse = ''
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader><leader>', '<c-^>')
 vim.keymap.set('n', '<leader>e', '<cmd>Ex<cr>')
-
-vim.cmd('highlight Normal guibg=None')

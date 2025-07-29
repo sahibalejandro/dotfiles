@@ -33,6 +33,6 @@ return {
     },
     fzf_opts = {
       ['--layout'] = false,
-    }
+    },
   },
 }
