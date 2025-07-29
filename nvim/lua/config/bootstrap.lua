@@ -4,6 +4,7 @@ vim.o.relativenumber = true
 vim.o.signcolumn = 'yes'
 vim.o.wrap = false
 vim.o.swapfile = false
+vim.o.winborder = 'rounded'
 
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
