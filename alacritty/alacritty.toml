@@ -4,13 +4,15 @@ TERM = "xterm-256color"
 [font]
 size = 17
 normal = { family = "JetBrainsMonoNL Nerd Font" }
-offset = { y = 12 }
-glyph_offset = { y = 6 }
+offset = { y = 20 }
+glyph_offset = { y = 10 }
 
 [window]
 dynamic_padding = true
 decorations = "Buttonless"
 padding = { x = 5, y = 5 }
+opacity = 0.9
+blur = false
 
 [selection]
 save_to_clipboard = true
