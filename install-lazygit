@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+DOTFILES_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 echo "Linking LazyGit configuration..."
 LAZYGIT_DIR="$HOME/Library/Application Support/lazygit"
 rm -rf "$LAZYGIT_DIR"
-ln -s "$DOTFILESDIR/lazygit" "$LAZYGIT_DIR"
+ln -s "$DOTFILES_DIR/lazygit" "$LAZYGIT_DIR"

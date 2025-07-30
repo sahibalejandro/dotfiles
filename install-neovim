@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+DOTFILES_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 echo "Linking NeoVim configuration..."
 NVIM_DIR="$HOME/.config/nvim"
 rm -rf "$NVIM_DIR"
-ln -s "$DOTFILESDIR/nvim" "$NVIM_DIR"
+ln -s "$DOTFILES_DIR/nvim" "$NVIM_DIR"

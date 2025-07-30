@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+DOTFILES_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 echo "Linking Ghostty configuration..."
 GHOSTTY_DIR="$HOME/.config/ghostty"
 rm -rf "$GHOSTTY_DIR"
-ln -s "$DOTFILESDIR/ghostty" "$GHOSTTY_DIR"
+ln -s "$DOTFILES_DIR/ghostty" "$GHOSTTY_DIR"

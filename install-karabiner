@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+DOTFILES_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 echo "Linking Karabiner configuration..."
 KARABINER_FILE="$HOME/.config/karabiner/karabiner.json"
 rm -rf "$KARABINER_FILE"
-ln -s "$DOTFILESDIR/karabiner/karabiner.json" "$KARABINER_FILE"
+ln -s "$DOTFILES_DIR/karabiner/karabiner.json" "$KARABINER_FILE"

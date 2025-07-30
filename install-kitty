@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-DOTFILESDIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+DOTFILES_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 echo "Linking Kitty configuration..."
 KITTY_DIR="$HOME/.config/kitty"
 rm -rf "$KITTY_DIR"
-ln -s "$DOTFILESDIR/kitty" "$KITTY_DIR"
+ln -s "$DOTFILES_DIR/kitty" "$KITTY_DIR"
