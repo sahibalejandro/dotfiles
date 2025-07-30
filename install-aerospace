@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DOTFILES_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+echo "Linking Aerospace configuration..."
+AEROSPACE_FILE="$HOME/.aerospace.toml"
+rm -f "$AEROSPACE_FILE"
+ln -s "$DOTFILES_DIR/aerospace/aerospace.toml" "$AEROSPACE_FILE"
