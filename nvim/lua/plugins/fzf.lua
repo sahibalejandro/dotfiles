@@ -34,5 +34,8 @@ return {
     fzf_opts = {
       ['--layout'] = false,
     },
+    oldfiles = {
+      cwd_only = true,
+    },
   },
 }
