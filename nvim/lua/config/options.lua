@@ -14,7 +14,11 @@ vim.o.winborder = 'rounded'
 vim.o.wrap = false
 vim.o.swapfile = false
 vim.o.mouse = ''
+vim.o.scrolloff = 5
+vim.o.sidescrolloff = 10
 
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader><leader>', '<c-^>')
 vim.keymap.set('n', '<leader>e', '<cmd>Ex<cr>')
+
+vim.cmd('set completeopt+=menuone,noselect,fuzzy')
