@@ -1,4 +1,5 @@
 require('config.options')
 require('config.lazy')
 require('config.lsp')
+require('config.lang-specific-configs')
 require('config.colorscheme')
