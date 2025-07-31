@@ -4,11 +4,9 @@ return {
   config = function(lint)
     local lint = require('lint')
 
-
-
     -- Use better PHP Standards
     local php_standard = vim.fn.getenv('HOME'):find('sjaramillo')
-      and 'tests/standards/stable-standard.xml'
+      and 'tests/standards/stable-ruleset.xml'
       or 'PSR12'
 
     table.insert(
