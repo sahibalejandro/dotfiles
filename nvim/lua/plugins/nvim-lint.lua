@@ -4,6 +4,19 @@ return {
   config = function(lint)
     local lint = require('lint')
 
+
+
+    -- Use better PHP Standards
+    local php_standard = vim.fn.getenv('HOME'):find('sjaramillo')
+      and 'tests/standards/stable-standard.xml'
+      or 'PSR12'
+
+    table.insert(
+      lint.linters.phpcs.args,
+      table.getn(lint.linters.phpcs.args) - 1,
+      '--standard='..php_standard
+    )
+
     lint.linters_by_ft = {
       php = {'phpcs'}
     }
