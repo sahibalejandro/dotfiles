@@ -16,6 +16,7 @@ vim.o.swapfile = false
 vim.o.mouse = ''
 vim.o.scrolloff = 5
 vim.o.sidescrolloff = 10
+vim.o.grepprg = 'rg --vimgrep'
 
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader><leader>', '<c-^>')
