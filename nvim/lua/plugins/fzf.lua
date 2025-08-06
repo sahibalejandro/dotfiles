@@ -1,3 +1,5 @@
+local fzf_opts_preview_hidden = { winopts = { preview = { hidden = false } } }
+
 return {
   "ibhagwan/fzf-lua",
   keys = {
@@ -14,9 +16,16 @@ return {
     {
       '<leader>s',
       function()
-        require('fzf-lua').live_grep({ winopts = { preview = { hidden = false } } })
+        require('fzf-lua').live_grep(fzf_opts_preview_hidden)
       end,
       desc = 'Search pattern using ripgrep and fzf' 
+    },
+    {
+      '<leader>k',
+      function()
+        require('fzf-lua').grep_cword(fzf_opts_preview_hidden)
+      end,
+      desc = 'Search word under the cursor' 
     },
   },
   opts = {
