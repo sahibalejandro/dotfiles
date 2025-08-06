@@ -10,8 +10,8 @@ return {
     },
     {
       '<leader>o',
-      '<cmd>FzfLua oldfiles<cr>',
-      desc = 'Find old files using FZF' 
+      '<cmd>FzfLua buffers<cr>',
+      desc = 'Find buffers using FZF' 
     },
     {
       '<leader>s',
