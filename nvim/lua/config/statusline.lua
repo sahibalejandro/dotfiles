@@ -1,5 +1,15 @@
+local git_checked = false
+local git_available = false
+
 function zero_get_branch()
-  if not vim.loop.fs_stat('.git') then
+  if not git_checked then
+    git_checked = true
+    if vim.loop.fs_stat('.git') then
+      git_available = true
+    end
+  end
+
+  if not git_available then
     return ''
   end
 
