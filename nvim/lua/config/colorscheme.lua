@@ -1,4 +1,4 @@
-vim.cmd('colorscheme tokyonight-night')
+vim.cmd('colorscheme carbonfox')
 
 -- Neovim groups
 vim.cmd('hi Normal guibg=none')
