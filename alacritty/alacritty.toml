@@ -3,7 +3,7 @@ TERM = "xterm-256color"
 
 [font]
 size = 18
-normal = { family = "JetBrainsMonoNL Nerd Font" }
+normal = { family = "Hack" }
 #offset = { y = 20 }
 #glyph_offset = { y = 10 }
 
