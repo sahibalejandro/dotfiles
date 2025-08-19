@@ -1,5 +1,6 @@
-require "bootstrap.neovim"
-require "bootstrap.mappings"
-require "bootstrap.autocommands"
-
-require "bootstrap.lazy"
+require('config.options')
+require('config.lazy')
+require('config.lsp')
+require('config.lang-specific-configs')
+require('config.colorscheme')
+require('config.statusline')
