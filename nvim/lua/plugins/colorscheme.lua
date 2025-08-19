@@ -1,6 +1,9 @@
 return {
-  'EdenEast/nightfox.nvim',
+  'catppuccin/nvim',
+  name = 'catppuccin',
   lazy = false,
   priority = 1000,
-  opts = {},
+  opts = {
+    flavor = 'macchiato',
+  },
 }
