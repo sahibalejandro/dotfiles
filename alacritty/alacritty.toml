@@ -2,7 +2,7 @@
 TERM = "xterm-256color"
 
 [font]
-size = 17
+size = 20
 normal = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Light" }
 bold = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Regular" }
 italic = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Light Italic" }
@@ -14,7 +14,7 @@ bold_italic = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Italic" }
 dynamic_padding = true
 decorations = "Buttonless"
 padding = { x = 10, y = 10 }
-opacity = 0.9
+opacity = 0.85
 blur = true
 
 [selection]

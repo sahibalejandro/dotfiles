@@ -22,7 +22,7 @@ function zero_get_branch()
 end
 
 local function set_statusline(left_hl_group, right_hl_group, scope)
-  scope.statusline = '%#'..left_hl_group..'#%f %m%r%h%w%q %#StatusLineNC#%{%v:lua.zero_get_branch()%}%#'..right_hl_group..'#%=%-14.(%l,%c%V%) %P'
+  scope.statusline = '%#'..left_hl_group..'#%f %m%r%h%w%q %#'..right_hl_group..'#%{%v:lua.zero_get_branch()%}%=%-14.(%l,%c%V%) %P'
 end
 
 vim.api.nvim_create_autocmd('WinEnter', {
@@ -38,7 +38,7 @@ vim.api.nvim_create_autocmd('WinLeave', {
 })
 
 vim.cmd('hi StatusLine guibg=none')
-vim.cmd('hi StatusLineNC guibg=none guifg=#555977')
+vim.cmd('hi StatusLineNC guibg=none guifg=#666e8f')
 vim.cmd('hi CustomStatusLine guifg=#f3af4a')
 vim.cmd('hi CustomStatusLineNC guifg=default')
 
