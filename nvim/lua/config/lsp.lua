@@ -1,4 +1,13 @@
 vim.lsp.enable('intelephense')
+vim.lsp.enable('vtsls', {
+  settings = {
+    typescript = {
+      tsserver = {
+        maxTsServerMemory = 6144,
+      },
+    },
+  },
+})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(event)
