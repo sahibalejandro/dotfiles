@@ -14,7 +14,7 @@ bold_italic = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Italic" }
 dynamic_padding = true
 decorations = "Buttonless"
 padding = { x = 10, y = 10 }
-opacity = 0.85
+opacity = 0.9
 blur = true
 
 [selection]
