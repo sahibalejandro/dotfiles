@@ -2,7 +2,7 @@
 TERM = "xterm-256color"
 
 [font]
-size = 20
+size = 18
 normal = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Light" }
 bold = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Regular" }
 italic = { family = "JetBrainsMonoNL Nerd Font Mono", style = "Light Italic" }
