@@ -1,8 +1,8 @@
-local lspconfig = require('lspconfig')
+--local lspconfig = require('lspconfig')
 
 vim.lsp.enable('intelephense')
 
-lspconfig.vtsls.setup({
+vim.lsp.config('vtsls', {
   settings = {
     typescript = {
       tsserver = {
