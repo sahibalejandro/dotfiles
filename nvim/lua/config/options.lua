@@ -17,6 +17,7 @@ vim.o.mouse = ''
 vim.o.scrolloff = 5
 vim.o.sidescrolloff = 10
 vim.o.grepprg = 'rg --vimgrep'
+vim.o.colorcolumn = '121'
 
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader><leader>', '<c-^>')

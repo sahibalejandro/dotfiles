@@ -29,6 +29,9 @@ return {
     },
   },
   opts = {
+    keymap = {
+      fzf = { ["ctrl-q"] = "select-all+accept" },
+    },
     winopts = {
       border = 'none',
       fullscreen = true,
