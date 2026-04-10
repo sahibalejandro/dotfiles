@@ -24,3 +24,9 @@ save_to_clipboard = true
 import = [
   "~/.config/alacritty/theme.toml"
 ]
+
+[[keyboard.bindings]]
+# Add support for line breaks with shift+enter in Claude Code
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
