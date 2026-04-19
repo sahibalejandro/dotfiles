@@ -7,7 +7,6 @@ normal = { family = "GoogleSansCode Nerd Font Mono", style = "Light" }
 bold = { family = "GoogleSansCode Nerd Font Mono", style = "Regular" }
 italic = { family = "GoogleSansCode Nerd Font Mono", style = "Light Italic" }
 bold_italic = { family = "GoogleSansCode Nerd Font Mono", style = "Italic" }
-offset = { y = 12 }
 glyph_offset = { y = 6 }
 
 [window]
