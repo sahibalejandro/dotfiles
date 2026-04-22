@@ -1,5 +1,3 @@
---local lspconfig = require('lspconfig')
-
 vim.lsp.enable('intelephense')
 
 vim.lsp.config('vtsls', {

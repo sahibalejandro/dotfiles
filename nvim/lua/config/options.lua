@@ -23,4 +23,4 @@ vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader><leader>', '<c-^>')
 vim.keymap.set('n', '<leader>e', '<cmd>Ex<cr>')
 
-vim.cmd('set completeopt+=menuone,noinsert,fuzzy')
+vim.opt.completeopt = { 'menuone', 'noinsert', 'fuzzy' }
