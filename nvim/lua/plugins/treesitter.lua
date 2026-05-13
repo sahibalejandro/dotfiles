@@ -30,10 +30,21 @@ return {
       'yaml',
     })
 
+    local filetypes_to_ignore = {
+      'qf',
+      'mason',
+      'lazy',
+    }
+
     vim.api.nvim_create_autocmd('FileType', {
       pattern = { '*' },
       callback = function(ev)
         local filetype = vim.bo[ev.buf].filetype
+
+        if vim.tbl_contains(filetypes_to_ignore, filetype) then
+          return
+        end
+
         local installed_parsers = nvim_treesitter.get_installed()
 
         if not vim.tbl_contains(installed_parsers, filetype) then
