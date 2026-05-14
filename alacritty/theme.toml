@@ -1,68 +1,68 @@
-# Catppuccin Macchiato
+# Catppuccin Frappe
 # https://github.com/catppuccin/alacritty
 
 [colors.primary]
-background = "#24273a"
-foreground = "#cad3f5"
-dim_foreground = "#8087a2"
-bright_foreground = "#cad3f5"
+background = "#303446"
+foreground = "#c6d0f5"
+dim_foreground = "#838ba7"
+bright_foreground = "#c6d0f5"
 
 [colors.cursor]
-text = "#24273a"
-cursor = "#f4dbd6"
+text = "#303446"
+cursor = "#f2d5cf"
 
 [colors.vi_mode_cursor]
-text = "#24273a"
-cursor = "#b7bdf8"
+text = "#303446"
+cursor = "#babbf1"
 
 [colors.search.matches]
-foreground = "#24273a"
-background = "#a5adcb"
+foreground = "#303446"
+background = "#a5adce"
 
 [colors.search.focused_match]
-foreground = "#24273a"
-background = "#a6da95"
+foreground = "#303446"
+background = "#a6d189"
 
 [colors.footer_bar]
-foreground = "#24273a"
-background = "#a5adcb"
+foreground = "#303446"
+background = "#a5adce"
 
 [colors.hints.start]
-foreground = "#24273a"
-background = "#eed49f"
+foreground = "#303446"
+background = "#e5c890"
 
 [colors.hints.end]
-foreground = "#24273a"
-background = "#a5adcb"
+foreground = "#303446"
+background = "#a5adce"
 
 [colors.selection]
-text = "#24273a"
-background = "#f4dbd6"
+text = "#303446"
+background = "#f2d5cf"
 
 [colors.normal]
-black = "#494d64"
-red = "#ed8796"
-green = "#a6da95"
-yellow = "#eed49f"
-blue = "#8aadf4"
-magenta = "#f5bde6"
-cyan = "#8bd5ca"
-white = "#b8c0e0"
+black = "#51576d"
+red = "#e78284"
+green = "#a6d189"
+yellow = "#e5c890"
+blue = "#8caaee"
+magenta = "#f4b8e4"
+cyan = "#81c8be"
+white = "#b5bfe2"
 
 [colors.bright]
-black = "#5b6078"
-red = "#ed8796"
-green = "#a6da95"
-yellow = "#eed49f"
-blue = "#8aadf4"
-magenta = "#f5bde6"
-cyan = "#8bd5ca"
-white = "#a5adcb"
+black = "#626880"
+red = "#e78284"
+green = "#a6d189"
+yellow = "#e5c890"
+blue = "#8caaee"
+magenta = "#f4b8e4"
+cyan = "#81c8be"
+white = "#a5adce"
 
 [[colors.indexed_colors]]
 index = 16
-color = "#f5a97f"
+color = "#ef9f76"
 
 [[colors.indexed_colors]]
 index = 17
-color = "#f4dbd6"
+color = "#f2d5cf"
