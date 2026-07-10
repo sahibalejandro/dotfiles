@@ -22,5 +22,6 @@ vim.o.colorcolumn = '121'
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<leader><leader>', '<c-^>')
 vim.keymap.set('n', '<leader>e', '<cmd>Ex<cr>')
+vim.keymap.set('n', '<leader>p', '<cmd>let @+=expand("%")<cr>')
 
 vim.opt.completeopt = { 'menuone', 'noinsert', 'fuzzy' }
