@@ -1,15 +1,30 @@
 vim.lsp.enable('intelephense')
 
 vim.lsp.config('vtsls', {
+  filetypes = {
+    'typescript',
+    'javascript',
+    'javascriptreact',
+    'typescriptreact',
+    'vue',
+  },
   settings = {
-    typescript = {
+    vtsls = {
       tsserver = {
         maxTsServerMemory = 8192,
+        globalPlugins = {
+          {
+            name = "@vue/typescript-plugin",
+            location = vim.fn.stdpath("data") .. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+            languages = { "vue" },
+            configNamespace = "typescript",
+          },
+        },
       },
     },
   },
 })
-vim.lsp.enable('vtsls')
+vim.lsp.enable({ 'vtsls', 'vue_ls' })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(event)
