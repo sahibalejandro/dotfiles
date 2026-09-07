@@ -11,6 +11,7 @@ return {
       'bash',
       'css',
       'dockerfile',
+      'glimmer',
       'html',
       'javascript',
       'json',
@@ -59,6 +60,14 @@ return {
           vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
         end
       end,
+    })
+
+    -- Map .mustache and .hbs extension to glimmer parser
+    vim.filetype.add({
+        extension = {
+            mustache = "glimmer",
+            hbs = "glimmer",
+        },
     })
   end,
 }
